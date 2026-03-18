@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Brendan Lou S. Millares, a Computer Engineering student at DLSU."/>
+  <title>Brendan Lou S. Millares | Portfolio</title>
+
+  <!-- Google Fonts: DM Serif Display + Manrope — load before Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap 5.3 CSS via jsDelivr CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+
+  <!-- Custom overrides: must come AFTER Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#hero">Brendan<span class="brand-dot">.</span></a>
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarMain"
+      aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary btn-sm text-black px-3 ms-lg-2 fw-bold" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════════════
+     HERO — full viewport, ghost bg text
+═══════════════════════════════════════ -->
+<section id="hero" class="d-flex align-items-center min-vh-100 portfolio-section hero-section">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left text -->
+      <div class="col-12 col-lg-7">
+        <p class="hero-eyebrow text-uppercase fw-semibold mb-2 fade-up">DLSU &middot; Computer Engineering</p>
+        <h1 class="hero-title mb-2 fade-up d1">
+          BRENDAN<br>
+          <em class="hero-italic">Lou</em>
+        </h1>
+        <p class="hero-subtitle mb-3 fade-up d2">
+          Builder <span class="hero-amp">&amp;</span> Leader
+        </p>
+        <p class="hero-desc mb-4 fade-up d2">
+          Passionate about creating innovative solutions through code and design.
+          Currently pursuing BS Computer Engineering at DLSU while leading organizations,
+          building technical projects, and creating multimedia that matters.
+        </p>
+        <div class="d-flex flex-wrap gap-3 fade-up d3">
+          <a href="#works" class="btn btn-primary btn-lg px-4">View My Work</a>
+          <a href="assets/cv.pdf" class="btn btn-outline-light btn-lg px-4" download>Download CV</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WORKS — 3-col grid, filter, tinted images
+═══════════════════════════════════════ -->
+<section id="works" class="portfolio-section">
+  <div class="container">
+    <p class="section-label fade-up">Selected Work</p>
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <h2 class="section-title fade-up d1">Projects<br><em>&amp; Work</em></h2>
+      <div class="d-flex flex-wrap gap-2 fade-up d1" role="group" aria-label="Project category filter">
+        <button class="btn btn-sm filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-sm filter-btn" data-filter="tech">Technical</button>
+        <button class="btn btn-sm filter-btn" data-filter="events">Events</button>
+        <button class="btn btn-sm filter-btn" data-filter="media">Multimedia</button>
+      </div>
+    </div>
+
+    <!-- row-cols-1 → stacks on mobile; row-cols-lg-3 → 3 col on desktop (checklist #6/#7) -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="projectsGrid">
+
+      <!-- G-Scan -->
+      <div class="col project-item" data-cat="tech">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/G-Scan.png" class="project-img" alt="G-Scan GCash receipts to Excel data analytics tool screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Technical</span>
+            <h3 class="card-title h5">G-Scan</h3>
+            <p class="card-text flex-grow-1">Data analytics tool using Python to convert GCash receipts into structured Excel formats for business intelligence.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Python</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Data Analytics</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Plantita-Fi -->
+      <div class="col project-item" data-cat="tech">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Plantita-Fi.png" class="project-img" alt="Plantita-Fi smart hydroponics IoT monitoring system interface screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Technical</span>
+            <h3 class="card-title h5">Plantita-Fi</h3>
+            <p class="card-text flex-grow-1">IoT-based smart environmental monitoring and control system for urban farming, built with NodeMCU and Blynk.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">NodeMCU</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Blynk</span>
+              <span class="badge bg-success-subtle text-success-emphasis">IoT</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- BedChem -->
+      <div class="col project-item" data-cat="tech">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Bedchem.png" class="project-img" alt="BedChem clinical evaluation and efficiency discrete mathematics system screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Technical</span>
+            <h3 class="card-title h5">BedChem</h3>
+            <p class="card-text flex-grow-1">Clinical efficiency system using Fractional Knapsack and Dijkstra's Algorithms for optimal healthcare distribution.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Discrete Math</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Algorithms</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ELM Prestige -->
+      <div class="col project-item" data-cat="tech">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/ELM-Prestige.png" class="project-img" alt="ELM Prestige beauty network official website design screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Technical</span>
+            <h3 class="card-title h5">ELM Prestige</h3>
+            <p class="card-text flex-grow-1">Official website design and development for "The Signature Beauty Network" company.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">HTML</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">CSS</span>
+              <span class="badge bg-success-subtle text-success-emphasis">Web Dev</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- SYNTAX Math -->
+      <div class="col project-item" data-cat="events">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/SYNTAX-Math.png" class="project-img" alt="SYNTAX Math Challenge inter-school mathematics competition event photo" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Events &amp; Leadership</span>
+            <h3 class="card-title h5">SYNTAX Math</h3>
+            <p class="card-text flex-grow-1">Lead organizer for this flagship inter-school mathematics competition as VP for Activities of SYNTAX.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">VP for Activities</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Competition</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- LSS Summit -->
+      <div class="col project-item" data-cat="events">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/LSS-Summit.png" class="project-img" alt="Lasallian Scholars Summit event coordination and program flow photo" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Events &amp; Leadership</span>
+            <h3 class="card-title h5">LSS Summit</h3>
+            <p class="card-text flex-grow-1">Led coordination of program flow, hosting, and on-ground execution for the Lasallian Scholars Summit.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Lead Associate</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Summit</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Alpha ENCORE -->
+      <div class="col project-item" data-cat="events">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Alpha-Encore.png" class="project-img" alt="Alpha ENCORE scholars general assembly and Scholars Week event photo" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Events &amp; Leadership</span>
+            <h3 class="card-title h5">Alpha: ENCORE</h3>
+            <p class="card-text flex-grow-1">General assembly and Scholars Week festivities as LSS VP for Activities — a community-wide celebration.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">VP Activities</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Assembly</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Horizons -->
+      <div class="col project-item" data-cat="events">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Horizons.png" class="project-img" alt="Horizons sustainability in engineering seminar VoyageX event documentation" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Events &amp; Leadership</span>
+            <h3 class="card-title h5">Horizons</h3>
+            <p class="card-text flex-grow-1">VoyageX &amp; HORIZON seminars focused on sustainability and engineering boards, organized as SYNTAX lead.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">SYNTAX</span>
+              <span class="badge bg-success-subtle text-success-emphasis">Sustainability</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Green Media -->
+      <div class="col project-item" data-cat="events">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Green-Media.png" class="project-img" alt="Green Media Group Christmas Special social media campaign and video production screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Events &amp; Leadership</span>
+            <h3 class="card-title h5">Green Media Xmas</h3>
+            <p class="card-text flex-grow-1">Social media campaigns and filming production for the Green Media Group Christmas Special Video.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Social Media</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Video</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ANONAS -->
+      <div class="col project-item" data-cat="media">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/SAMPLE_PUBLICITY WORK.JPG" class="project-img" alt="ANONAS T-shirt campaign graphic design publicity materials sample" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Multimedia &amp; Creative</span>
+            <h3 class="card-title h5">ANONAS</h3>
+            <p class="card-text flex-grow-1">Publicity posts and design assets for merchandise and T-shirt selling campaign.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Graphic Design</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Pub Mats</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Muni-Muni -->
+      <div class="col project-item" data-cat="media">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Muni-Muni.png" class="project-img" alt="Muni-Muni short film video editing screenshot featuring Jerry Gracio literary works" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Multimedia &amp; Creative</span>
+            <h3 class="card-title h5">Muni-Muni</h3>
+            <p class="card-text flex-grow-1">Video editing for a short film highlighting and interpreting the literary works of Jerry Gracio.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Video Editing</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Short Film</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Fast & Festive -->
+      <div class="col project-item" data-cat="media">
+        <article class="card h-100 border-0 project-card">
+          <div class="project-img-wrap">
+            <img src="img/Fast-Festive.png" class="project-img" alt="Fast and Festive Animo Christmas interview special video production screenshot" loading="lazy" width="400" height="225"/>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <span class="project-cat mb-1">Multimedia &amp; Creative</span>
+            <h3 class="card-title h5">Fast &amp; Festive</h3>
+            <p class="card-text flex-grow-1">Interview special "Fast, Festive, and Fire" produced with the Green Media Group for Animo Christmas.</p>
+            <div class="d-flex gap-2 flex-wrap mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis">Production</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Green Media</span>
+            </div>
+            <div class="mt-auto d-flex gap-2">
+              <a href="#" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SKILLS — 8 progress bars (checklist #9)
+═══════════════════════════════════════ -->
+<section id="skills" class="portfolio-section alt-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-12 col-lg-4">
+        <p class="section-label fade-up">Capabilities</p>
+        <h2 class="section-title fade-up d1">My<br><em>Skills</em></h2>
+        <p class="mt-3 fade-up d2" style="color:#888;font-size:0.88rem;line-height:1.85">Technical and creative competencies developed through years of projects, leadership roles, and engineering work at DLSU.</p>
+      </div>
+      <div class="col-12 col-lg-8">
+
+        <div class="mb-3 fade-up">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Publicity &amp; Media</label>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Publicity and Media skill level" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up d1">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Video Editing</label>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Video Editing skill level" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up d2">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Event Management</label>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Event Management skill level" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Python</label>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Python programming skill level" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:80%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up d1">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Graphic Design</label>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Graphic Design skill level" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:78%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up d2">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">HTML / CSS</label>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="HTML and CSS skill level" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:75%"></div>
+          </div>
+        </div>
+
+        <div class="mb-3 fade-up">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">IoT / Embedded Systems</label>
+            <span class="skill-pct">72%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="IoT and Embedded Systems skill level" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:72%"></div>
+          </div>
+        </div>
+
+        <div class="mb-0 fade-up d1">
+          <div class="d-flex justify-content-between mb-1">
+            <label class="form-label mb-0 fw-medium">Data Handling</label>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Data Handling skill level" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:70%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════ -->
+<section id="about" class="portfolio-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-12 col-md-4 text-center">
+        <img
+          src="img/Millares.jpg"
+          alt="Profile photo of Brendan Lou S. Millares, Computer Engineering student at De La Salle University"
+          class="img-fluid rounded about-img shadow"
+          width="360" height="480"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="col-12 col-md-8">
+        <p class="section-label fade-up">About Me</p>
+        <h2 class="section-title fade-up d1">About<br><em>Brendan</em></h2>
+        <p class="mt-3 fade-up d2" style="color:#888;font-size:0.9rem;line-height:1.9">
+          I blend my engineering voyage with strategic leadership and multimedia knowledge.
+          As a Computer Engineering student at DLSU, currently serving as Vice President
+          for Activities at the Lasallian Scholars Society, I've developed a unique perspective
+          that combines technical expertise with creative problem-solving.
+        </p>
+        <p class="fade-up d2" style="color:#888;font-size:0.9rem;line-height:1.9">
+          My technical expertise spans Python programming, IoT systems development, and data
+          analytics, while my leadership experience includes event management, publicity
+          coordination, and multimedia production.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-4 fade-up d3">
+          <span class="badge rounded-pill bg-primary text-black fw-semibold">Computer Engineering</span>
+          <span class="badge rounded-pill bg-primary text-black fw-semibold">Python</span>
+          <span class="badge rounded-pill bg-primary text-black fw-semibold">IoT</span>
+          <span class="badge rounded-pill" style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.1);color:#888">Event Management</span>
+          <span class="badge rounded-pill" style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.1);color:#888">Video Editing</span>
+          <span class="badge rounded-pill" style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.1);color:#888">Graphic Design</span>
+        </div>
+        <div class="row g-3 mt-3">
+          <div class="col-4"><div class="stat-box text-center p-3 rounded"><div class="stat-num">10+</div><div class="mt-1" style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#555">Organizations</div></div></div>
+          <div class="col-4"><div class="stat-box text-center p-3 rounded"><div class="stat-num">12+</div><div class="mt-1" style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#555">Projects</div></div></div>
+          <div class="col-4"><div class="stat-box text-center p-3 rounded"><div class="stat-num">4+</div><div class="mt-1" style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#555">VP Roles</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════ -->
+<section id="education" class="portfolio-section alt-section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-lg-4">
+        <p class="section-label fade-up">Academic Background</p>
+        <h2 class="section-title fade-up d1">My<br><em>Education</em></h2>
+        <p class="mt-3 fade-up d2" style="color:#888;font-size:0.88rem;line-height:1.9">A foundation built across engineering, technology, and leadership — from the classroom to the frontlines of student organizations.</p>
+      </div>
+      <div class="col-12 col-lg-8">
+
+        <div class="pb-4 mb-4 border-bottom">
+          <div class="row g-3">
+            <div class="col-12 col-sm-3"><span class="edu-year d-block">2023 &mdash; Present</span></div>
+            <div class="col-12 col-sm-9">
+              <h3 class="edu-deg h5 mb-1">BS Computer Engineering</h3>
+              <p class="edu-school mb-2">De La Salle University &mdash; Manila</p>
+              <p style="color:#888;font-size:0.82rem" class="mb-2">Currently pursuing a Bachelor of Science in Computer Engineering with focus areas in embedded systems, data science, and software development.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-primary-subtle text-primary-emphasis">Currently Enrolled</span>
+                <span class="badge bg-primary-subtle text-primary-emphasis">3rd Year</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">CpE Track</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row g-3">
+            <div class="col-12 col-sm-3"><span class="edu-year d-block">2016 &mdash; 2023</span></div>
+            <div class="col-12 col-sm-9">
+              <h3 class="edu-deg h5 mb-1">Senior High &amp; JHS</h3>
+              <p class="edu-school mb-2">Valenzuela City School of Mathematics and Science</p>
+              <p style="color:#888;font-size:0.82rem" class="mb-2">Completed Junior and Senior High School with a strong STEM foundation. Active in robotics and science advocacy programs throughout.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">STEM Track</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">Robotics Guild</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">PSYSC NCR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════════ -->
+<section id="experience" class="portfolio-section">
+  <div class="container">
+    <p class="section-label fade-up">Track Record</p>
+    <h2 class="section-title mb-5 fade-up d1">Experience<br><em>&amp; Leadership</em></h2>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2025 &mdash; Present</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Vice President for Activities</h3><p class="exp-org small mb-1">DLSU Lasallian Scholars Society</p><p style="color:#666;font-size:0.82rem">Plans and facilitates activities to enrich scholars' academic and personal growth. Maintains communication channels and coordinates attendance.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Leadership</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2025 &mdash; Present</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Rookie &mdash; Social Media Management</h3><p class="exp-org small mb-1">DLSU Green Media Group</p><p style="color:#666;font-size:0.82rem">Creates and schedules social media content aligned with organizational branding. Collaborates on digital initiatives.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Media</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Jan 2025 &mdash; Sept 2025</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Executive Officer for Sports</h3><p class="exp-org small mb-1">DLSU Engineering College Government</p><p style="color:#666;font-size:0.82rem">Strategized and executed sports programs enhancing wellness and teamwork among engineering students.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Governance</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Oct 2024 &mdash; Sept 2025</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Lead Associate for Events</h3><p class="exp-org small mb-1">LSSUMMIT &mdash; Lasallian Scholars Summit</p><p style="color:#666;font-size:0.82rem">Led coordination of program flow, hosting, and on-ground execution for the Lasallian Scholars Summit.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Events</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Oct 2024 &mdash; Sept 2025</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Marketing Executive</h3><p class="exp-org small mb-1">DLSU Data Science Society</p><p style="color:#666;font-size:0.82rem">Strategized marketing content and crafted captions for social media campaigns. Maintained consistent brand messaging.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Marketing</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2024 &mdash; June 2025</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Vice President for Activities</h3><p class="exp-org small mb-1">DLSU SYNTAX</p><p style="color:#666;font-size:0.82rem">Oversaw planning and execution of flagship engineering events including the SYNTAX Math Challenge.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Leadership</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2023 &mdash; Aug 2024</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Activities Officer</h3><p class="exp-org small mb-1">DLSU SYNTAX</p><p style="color:#666;font-size:0.82rem">Assisted in planning academic, social, and technical events. Organized logistics, venues, and attendee registration.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Events</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 border-bottom align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2021 &mdash; June 2023</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">NCR Regional Council Member</h3><p class="exp-org small mb-1">Philippine Society of Youth Science Clubs</p><p style="color:#666;font-size:0.82rem">Promoted STEM collaboration among Metro Manila schools through student delegate communication and national chapter coordination.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Advocacy</span></div>
+    </div>
+
+    <div class="exp-row row g-3 py-3 align-items-start fade-up">
+      <div class="col-12 col-md-3"><span class="exp-period">Sept 2021 &mdash; June 2023</span></div>
+      <div class="col-12 col-md-7"><h3 class="exp-role h6 mb-1">Business Manager</h3><p class="exp-org small mb-1">VCSMS Robotics Guild</p><p style="color:#666;font-size:0.82rem">Facilitated planning and execution of technical workshops and robotics competitions.</p></div>
+      <div class="col-12 col-md-2 text-md-end"><span class="badge exp-type-badge">Technical</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT — visible labels above each field (checklist #10)
+═══════════════════════════════════════ -->
+<section id="contact" class="portfolio-section alt-section">
+  <div class="container">
+    <div class="row g-5 justify-content-center">
+
+      <div class="col-12 col-lg-5">
+        <p class="section-label fade-up">Get In Touch</p>
+        <h2 class="section-title fade-up d1">Let's<br><em>Connect</em></h2>
+        <p class="mt-3 fade-up d2" style="color:#888;font-size:0.88rem;line-height:1.9">Whether you have a project in mind, want to collaborate on something exciting, or just want to say hello — my inbox is open.</p>
+        <a href="/cdn-cgi/l/email-protection#5735253239333639083a3e3b3b3625322417333b24227932332279273f" class="contact-email d-flex align-items-center gap-2 mt-3 fade-up d3">
+          <span class="contact-arrow">&#8594;</span><span class="__cf_email__" data-cfemail="7b19091e151f1a1524161217171a091e083b1f17080e551e1f0e550b13">[email&#160;protected]</span>
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <form id="contactForm" novalidate>
+          <div class="row g-3">
+            <div class="col-12 col-sm-6">
+              <label for="contactName" class="form-label fw-medium">Your Name</label>
+              <input type="text" class="form-control" id="contactName" name="name" placeholder="Juan dela Cruz" required aria-required="true"/>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label for="contactEmail" class="form-label fw-medium">Email Address</label>
+              <input type="email" class="form-control" id="contactEmail" name="email" placeholder="juan@example.com" required aria-required="true"/>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="col-12">
+              <label for="contactSubject" class="form-label fw-medium">Subject</label>
+              <input type="text" class="form-control" id="contactSubject" name="subject" placeholder="Project Collaboration"/>
+            </div>
+            <div class="col-12">
+              <label for="contactMessage" class="form-label fw-medium">Message</label>
+              <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or idea..." required aria-required="true"></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary px-5 fw-bold" id="submitBtn">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER — GitHub, LinkedIn, Email at the bottom -->
+<footer class="site-footer py-4">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+      <a href="#hero" class="footer-brand">Brendan<span class="brand-dot">.</span></a>
+      <p class="mb-0" style="font-size:0.72rem;color:#3a3a36">&copy; 2025 Brendan Lou S. Millares &mdash; All rights reserved.</p>
+    </div>
+    <div class="footer-socials d-flex justify-content-center align-items-center gap-4 pt-3 border-top">
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer-soc-link d-flex align-items-center gap-2" aria-label="GitHub profile of Brendan Millares">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <span>GitHub</span>
+      </a>
+      <div class="vr opacity-25"></div>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="footer-soc-link d-flex align-items-center gap-2" aria-label="LinkedIn profile of Brendan Millares">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <div class="vr opacity-25"></div>
+      <a href="/cdn-cgi/l/email-protection#1b79697e757f7a7544767277777a697e685b7f77686e357e7f6e356b73" class="footer-soc-link d-flex align-items-center gap-2" aria-label="Email brendan underscore millares at dlsu dot edu dot ph">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span><span class="__cf_email__" data-cfemail="b4d6c6d1dad0d5daebd9ddd8d8d5c6d1c7f4d0d8c7c19ad1d0c19ac4dc">[email&#160;protected]</span></span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
