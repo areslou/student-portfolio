@@ -184,7 +184,14 @@ body {
   background-position: right top; 
   background-repeat: no-repeat;
   z-index: 0;
-  filter: grayscale(30%) brightness(0.35);
+   filter: grayscale(30%) brightness(0.35);
+}
+ 
+/* On mobile: shift to right so the person's face shows */
+@media (max-width: 991.98px) {
+  .hero-section::before {
+    background-position: 75% top;
+  }
 }
 
 /* ── Dark gradient overlay + accent tint ── */
