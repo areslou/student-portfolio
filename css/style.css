@@ -190,7 +190,7 @@ body {
 /* On mobile: shift to right so the person's face shows */
 @media (max-width: 991.98px) {
   .hero-section::before {
-    background-position: 75% top;
+    background-position: 85% top;
   }
 }
 
