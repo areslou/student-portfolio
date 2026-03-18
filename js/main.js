@@ -104,26 +104,20 @@ if (heroImg && heroPlaceholder) {
   }
 }
 
-// ── CONTACT FORM VALIDATION ──────────────────────────────────────
+// ── CONTACT FORM — Bootstrap validation before FormSubmit ───────────────────
 const contactForm = document.getElementById('contactForm');
 const submitBtn   = document.getElementById('submitBtn');
+
 if (contactForm && submitBtn) {
   contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
     contactForm.classList.add('was-validated');
-    if (!contactForm.checkValidity()) return;
-
-    const orig = submitBtn.textContent;
-    submitBtn.textContent = 'Sent \u2713';
+    if (!contactForm.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    // Valid — let FormSubmit handle the actual POST
+    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
-    submitBtn.style.cssText = 'background:#22c55e;border-color:#22c55e;color:#fff';
-    setTimeout(() => {
-      submitBtn.textContent = orig;
-      submitBtn.disabled = false;
-      submitBtn.style.cssText = '';
-      contactForm.reset();
-      contactForm.classList.remove('was-validated');
-    }, 3000);
   });
 }

@@ -181,16 +181,15 @@ body {
   background-image: url('../img/brendanhome.png');
   background-size: cover;
   background-position: center top;
-  background-position: right top; 
   background-repeat: no-repeat;
   z-index: 0;
-   filter: grayscale(30%) brightness(0.35);
+  filter: grayscale(30%) brightness(0.35);
 }
- 
+
 /* On mobile: shift to right so the person's face shows */
 @media (max-width: 991.98px) {
   .hero-section::before {
-    background-position: 65% top;
+    background-position: 75% top;
   }
 }
 
@@ -593,4 +592,23 @@ body {
 }
 .fade-up {
   animation: forceVisible 0.01s 1.5s forwards;
+}
+
+/* ── CONTACT SOCIAL ICONS ── */
+.contact-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line2);
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+.contact-social:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
 }
