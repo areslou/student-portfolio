@@ -284,7 +284,15 @@ dialog#lightbox .close { position: absolute; right: 0; top: -46px; font-weight: 
 
 /* video cards */
 a.shot.vid { text-decoration: none; }
-.vid::after { content: "Watch on Facebook"; position: absolute; left: 0; bottom: 0; background: var(--amber); color: var(--ink); font-weight: 700; font-size: .9rem; padding: 7px 14px; }
+.vid::after { content: "Play video"; position: absolute; left: 0; bottom: 0; background: var(--amber); color: var(--ink); font-weight: 700; font-size: .9rem; padding: 7px 14px; }
 
 .vid img { mix-blend-mode: normal !important; filter: none !important; }
 .vid:hover img { transform: scale(1.04); }
+
+dialog#videobox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; color: #fff; }
+dialog#videobox::backdrop { background: rgba(10,20,36,.92); }
+.vframe { --vr: 1.7778; width: min(92vw, calc(78vh * var(--vr))); aspect-ratio: var(--vr); background: #000; border: 3px solid #fff; margin-inline: auto; }
+.vframe iframe { display: block; width: 100%; height: 100%; border: 0; }
+dialog#videobox p { text-align: center; margin: 12px 0 0; font-weight: 600; }
+dialog#videobox a { color: var(--amber); }
+dialog#videobox .close { position: absolute; right: 0; top: -46px; font-weight: 700; background: var(--amber); color: var(--ink); border: 0; padding: 9px 18px; cursor: pointer; }

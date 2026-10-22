@@ -246,4 +246,23 @@
     });
     box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
   }
+
+  /* ---------- video player: loads Facebook's embed only after a click ---------- */
+  var vbox = $("#videobox");
+  if (vbox && vbox.showModal) {
+    var vframe = $(".vframe", vbox), vlink = $("#vfallback", vbox);
+    var stop = function () { vframe.innerHTML = ""; };
+    $$(".vid").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        vframe.style.setProperty("--vr", a.dataset.ratio || "1.7778");
+        var src = "https://www.facebook.com/plugins/video.php?show_text=false&autoplay=1&href=" + encodeURIComponent(a.href);
+        vframe.innerHTML = '<iframe title="' + (a.dataset.alt || "Video") + '" src="' + src + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+        vlink.href = a.href;
+        vbox.showModal();
+      });
+    });
+    vbox.addEventListener("close", stop);
+    vbox.addEventListener("click", function (e) { if (e.target === vbox) vbox.close(); });
+  }
 })();
