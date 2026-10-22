@@ -265,3 +265,26 @@ dialog#lightbox .close { position: absolute; right: 0; top: -46px; font-weight: 
   * { transition: none !important; }
 }
 @media (max-width: 960px) { #trace { opacity: .28; } }
+
+/* ---------- brand pillars ---------- */
+.pillars { background: var(--white); border-bottom: 3px solid var(--ink); }
+.pillars ul { display: block; }
+.pillars li { border-top: 3px solid var(--ink); }
+.pillars li:first-child { border-top: 0; }
+.pillars a { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 12px 40px; align-items: center; padding: clamp(10px, 1.4vw, 20px) var(--gut); text-decoration: none; color: inherit; transition: background .12s, color .12s; }
+.pillars .word { font: 800 clamp(2.6rem, 7.4vw, 7rem)/.88 "Bricolage Grotesque", sans-serif; letter-spacing: -0.055em; text-transform: uppercase; display: block; transition: transform .22s cubic-bezier(.2,.7,.2,1); }
+.pillars .proof { font-weight: 600; max-width: 34ch; }
+.pillars a:hover .word, .pillars a:focus-visible .word { transform: translateX(clamp(8px, 2vw, 28px)); }
+.p1 a { background: var(--ink); color: var(--white); } .p1 a:hover { background: var(--amber); color: var(--ink); }
+.p2 a { background: var(--cobalt); color: var(--white); } .p2 a:hover { background: var(--ink); color: var(--amber); }
+.p3 a { background: var(--amber); color: var(--ink); } .p3 a:hover { background: var(--ink); color: var(--white); }
+.p4 a { background: var(--white); color: var(--ink); } .p4 a:hover { background: var(--cobalt); color: var(--white); }
+.p5 a { background: var(--mist); color: var(--ink); } .p5 a:hover { background: var(--amber); color: var(--ink); }
+@media (max-width: 700px) { .pillars a { grid-template-columns: 1fr; } }
+
+/* video cards */
+a.shot.vid { text-decoration: none; }
+.vid::after { content: "Watch on Facebook"; position: absolute; left: 0; bottom: 0; background: var(--amber); color: var(--ink); font-weight: 700; font-size: .9rem; padding: 7px 14px; }
+
+.vid img { mix-blend-mode: normal !important; filter: none !important; }
+.vid:hover img { transform: scale(1.04); }

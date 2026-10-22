@@ -237,7 +237,7 @@
   var box = $("#lightbox");
   if (box && box.showModal) {
     var bigImg = $("img", box), cap = $("p", box);
-    $$(".shot").forEach(function (s) {
+    $$(".shot:not(.vid)").forEach(function (s) {
       s.addEventListener("click", function () {
         bigImg.src = s.dataset.full; bigImg.alt = s.dataset.alt;
         cap.textContent = s.dataset.alt || "";
