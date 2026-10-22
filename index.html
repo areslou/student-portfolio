@@ -11,11 +11,13 @@
   <meta name="theme-color" content="#eef1f5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
 
   <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="Brendan Millares, home">Brendan Millares</a>
@@ -43,14 +45,24 @@
         </div>
       </div>
 
-      <figure class="scope" aria-label="A live signal trace you can steer with your pointer">
-        <canvas id="scope" width="720" height="420"></canvas>
+      <figure class="stage" id="stage">
+        <div class="stage-frame" id="stage-frame">
+          <img class="stage-base" src="images/portrait.webp" alt="Brendan Lou Millares with arms crossed, wearing a white shirt" width="900" height="1353" fetchpriority="high">
+          <img class="stage-fx" id="stage-fx" src="images/fx-signal.webp" alt="" aria-hidden="true" width="900" height="1353">
+          <span class="stage-ring" aria-hidden="true"></span>
+        </div>
         <figcaption>
-          <span>Move over the screen to change the frequency and amplitude.</span>
-          <button type="button" id="scope-toggle" aria-pressed="false">Pause</button>
+          <p class="hint" id="stage-hint">Hover over the photo. It's the same picture, read as a signal.</p>
+          <div class="modes" role="group" aria-label="Photo rendering">
+            <button type="button" data-fx="signal" aria-pressed="true">Signal</button>
+            <button type="button" data-fx="halftone" aria-pressed="false">Halftone</button>
+            <button type="button" data-fx="heat" aria-pressed="false">Heat</button>
+          </div>
         </figcaption>
       </figure>
     </section>
+
+    <div class="trace" aria-hidden="true"><canvas id="trace" width="1600" height="120"></canvas></div>
 
     <!-- FACTS -->
     <section class="facts" aria-label="At a glance">
@@ -97,7 +109,7 @@
 
       <article class="case">
         <div class="case-fig">
-          <p class="big">68 ms</p>
+          <p class="big"><span data-count="68">68</span> ms</p>
           <p class="big-sub">89.3% accuracy on a microcontroller</p>
         </div>
         <div class="case-body">
@@ -182,20 +194,20 @@
         <p>Posters, video and campaigns I produced for the organizations above.</p>
       </div>
       <ul class="gallery">
-        <li><img src="images/lss-summit.webp" alt="Lasallian Scholars Summit event photo" width="1100" height="733" loading="lazy"><p><strong>LSS Summit</strong> Event coordination</p></li>
-        <li><img src="images/alpha-encore.webp" alt="Alpha Encore general assembly" width="1100" height="733" loading="lazy"><p><strong>Alpha: ENCORE</strong> General assembly and Scholars Week</p></li>
-        <li><img src="images/syntax-math.webp" alt="SYNTAX Math Challenge" width="1100" height="733" loading="lazy"><p><strong>SYNTAX Math Challenge</strong> Flagship engineering event</p></li>
-        <li><img src="images/horizons.webp" alt="Horizons seminar poster" width="1000" height="1250" loading="lazy"><p><strong>Horizons</strong> VoyageX and HORIZON seminars</p></li>
-        <li><img src="images/green-media.webp" alt="Green Media Christmas special" width="1100" height="643" loading="lazy"><p><strong>Green Media Xmas</strong> Social campaign and filming</p></li>
-        <li><img src="images/muni-muni.webp" alt="Muni-Muni short film" width="878" height="545" loading="lazy"><p><strong>Muni-Muni</strong> Short film editing</p></li>
-        <li><img src="images/fast-festive.webp" alt="Fast and Festive interview special" width="591" height="746" loading="lazy"><p><strong>Fast &amp; Festive</strong> Interview special</p></li>
-        <li><img src="images/anonas.webp" alt="ANONAS merchandise publicity material" width="1000" height="1000" loading="lazy"><p><strong>ANONAS</strong> Merchandise publicity</p></li>
+        <li><button type="button" class="shot" data-full="images/lss-summit.webp" data-alt="Lasallian Scholars Summit event photo"><img src="images/lss-summit.webp" alt="Lasallian Scholars Summit event photo" width="1100" height="733" loading="lazy"></button><p><strong>LSS Summit</strong> Event coordination</p></li>
+        <li><button type="button" class="shot" data-full="images/alpha-encore.webp" data-alt="Alpha Encore general assembly"><img src="images/alpha-encore.webp" alt="Alpha Encore general assembly" width="1100" height="733" loading="lazy"></button><p><strong>Alpha: ENCORE</strong> General assembly and Scholars Week</p></li>
+        <li><button type="button" class="shot" data-full="images/syntax-math.webp" data-alt="SYNTAX Math Challenge"><img src="images/syntax-math.webp" alt="SYNTAX Math Challenge" width="1100" height="733" loading="lazy"></button><p><strong>SYNTAX Math Challenge</strong> Flagship engineering event</p></li>
+        <li><button type="button" class="shot" data-full="images/horizons.webp" data-alt="Horizons seminar poster"><img src="images/horizons.webp" alt="Horizons seminar poster" width="1000" height="1250" loading="lazy"></button><p><strong>Horizons</strong> VoyageX and HORIZON seminars</p></li>
+        <li><button type="button" class="shot" data-full="images/green-media.webp" data-alt="Green Media Christmas special"><img src="images/green-media.webp" alt="Green Media Christmas special" width="1100" height="643" loading="lazy"></button><p><strong>Green Media Xmas</strong> Social campaign and filming</p></li>
+        <li><button type="button" class="shot" data-full="images/muni-muni.webp" data-alt="Muni-Muni short film"><img src="images/muni-muni.webp" alt="Muni-Muni short film" width="878" height="545" loading="lazy"></button><p><strong>Muni-Muni</strong> Short film editing</p></li>
+        <li><button type="button" class="shot" data-full="images/fast-festive.webp" data-alt="Fast and Festive interview special"><img src="images/fast-festive.webp" alt="Fast and Festive interview special" width="591" height="746" loading="lazy"></button><p><strong>Fast &amp; Festive</strong> Interview special</p></li>
+        <li><button type="button" class="shot" data-full="images/anonas.webp" data-alt="ANONAS merchandise publicity material"><img src="images/anonas.webp" alt="ANONAS merchandise publicity material" width="1000" height="1000" loading="lazy"></button><p><strong>ANONAS</strong> Merchandise publicity</p></li>
       </ul>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <img class="portrait" src="images/profile.webp" alt="Portrait of Brendan Lou Millares" width="900" height="1353" loading="lazy">
+      <img class="portrait" src="images/portrait.webp" alt="Portrait of Brendan Lou Millares" width="900" height="1353" loading="lazy">
       <div>
         <h2 id="contact-title">Let's talk about your internship team</h2>
         <p>I'm looking for a technical, 480-hour practicum starting January 2027. If you build embedded, machine learning or software products and want someone who ships, I'd like to hear about it.</p>
@@ -214,6 +226,8 @@
     <p>&copy; 2026 Brendan Lou Millares</p>
     <a href="#top">Back to top</a>
   </footer>
+
+  <dialog id="lightbox" aria-label="Image viewer"><form method="dialog"><button class="close" aria-label="Close image">Close</button></form><img alt=""><p></p></dialog>
 
   <script src="js/main.js"></script>
 </body>
