@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brendan Lou Millares | Computer Engineering Portfolio</title>
-  <meta name="description" content="Brendan Lou Millares is a Computer Engineering student at De La Salle University building embedded systems, machine learning and web projects. Open to a January 2027 internship.">
+  <meta name="description" content="Brendan Lou Millares is a Computer Engineering student at De La Salle University working on speech and audio AI, embedded systems and student-led events. Open to internships from January 2027.">
   <meta property="og:title" content="Brendan Lou Millares | Computer Engineering Portfolio">
-  <meta property="og:description" content="Embedded systems, machine learning and web projects by a DLSU Computer Engineering student.">
+  <meta property="og:description" content="Speech and audio AI, embedded systems and student leadership. DLSU Computer Engineering.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#eef1f5">
+  <meta name="theme-color" content="#0a1424">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,29 +19,30 @@
   <div class="progress" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"></div>
 
-  <header class="nav" id="top">
-    <a class="brand" href="#top" aria-label="Brendan Millares, home">Brendan Millares</a>
+  <header class="bar" id="top">
+    <a class="brand" href="#top">Brendan Millares</a>
     <nav aria-label="Main">
       <a href="#projects">Projects</a>
+      <a href="#events">Events</a>
       <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#media">Media</a>
+      <a href="#record">Record</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-small" href="assets/brendan_cv.pdf">Download CV</a>
+    <a class="cv" href="assets/brendan_cv.pdf">CV (PDF)</a>
   </header>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <canvas id="trace" aria-hidden="true"></canvas>
       <div class="hero-copy">
-        <p class="status"><span class="dot" aria-hidden="true"></span>Available for a January 2027 internship</p>
+        <p class="status"><span class="blip" aria-hidden="true"></span>Open to internships from January 2027</p>
         <h1 id="hero-title">Brendan Lou Millares</h1>
-        <p class="lede">I'm a Computer Engineering student at De La Salle University. I build things that sense, decide and respond: offline speech recognition on a Raspberry Pi, a heart-signal classifier on a microcontroller, and a chatbot that cites its sources.</p>
+        <p class="lede">Computer Engineering at De La Salle University, minoring in Financial Risk and Analytics. I build speech and audio AI, embedded systems, and the events that bring scholars together.</p>
         <div class="actions">
-          <a class="btn" href="#projects">See my projects</a>
-          <a class="btn btn-ghost" href="https://github.com/areslou">GitHub</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/brendan-lou-millares-23a361289/">LinkedIn</a>
+          <a class="btn btn-amber" href="#projects">See the work</a>
+          <a class="btn" href="https://github.com/areslou">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/brendan-lou-millares-23a361289/">LinkedIn</a>
         </div>
       </div>
 
@@ -52,7 +53,7 @@
           <span class="stage-ring" aria-hidden="true"></span>
         </div>
         <figcaption>
-          <p class="hint" id="stage-hint">Hover over the photo. It's the same picture, read as a signal.</p>
+          <p class="hint" id="stage-hint">Hover the photo. Same picture, read as a signal.</p>
           <div class="modes" role="group" aria-label="Photo rendering">
             <button type="button" data-fx="signal" aria-pressed="true">Signal</button>
             <button type="button" data-fx="halftone" aria-pressed="false">Halftone</button>
@@ -62,163 +63,236 @@
       </figure>
     </section>
 
-    <div class="trace" aria-hidden="true"><canvas id="trace" width="1600" height="120"></canvas></div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Speech and audio AI</span><i></i><span>Engineering and analytics</span><i></i><span>Student leadership</span><i></i><span>Creative leadership</span><i></i><span>Dean's Lister, 5 terms</span><i></i><span>DOST-SEI Merit Scholar</span><i></i><span>Raspberry Pi 5</span><i></i><span>MATLAB</span><i></i><span>YOLOv8</span><i></i><span>Edge Impulse</span><i></i>
+        <span>Speech and audio AI</span><i></i><span>Engineering and analytics</span><i></i><span>Student leadership</span><i></i><span>Creative leadership</span><i></i><span>Dean's Lister, 5 terms</span><i></i><span>DOST-SEI Merit Scholar</span><i></i><span>Raspberry Pi 5</span><i></i><span>MATLAB</span><i></i><span>YOLOv8</span><i></i><span>Edge Impulse</span><i></i>
+      </div>
+    </div>
 
-    <!-- FACTS -->
-    <section class="facts" aria-label="At a glance">
-      <dl>
-        <div><dt>Degree</dt><dd>BS Computer Engineering, DLSU</dd></div>
-        <div><dt>Thesis</dt><dd>Offline speech AI for atypical speakers</dd></div>
-        <div><dt>Focus</dt><dd>Embedded, machine learning, web</dd></div>
-        <div><dt>Looking for</dt><dd>Technical internship, 480 hours</dd></div>
-      </dl>
+    <!-- NUMBERS -->
+    <section class="stats" aria-label="Results from my projects">
+      <div><p class="n"><span data-count="98.68" data-dec="2">98.68</span>%</p><p>helmet detection accuracy with MobileNetV3-Small in a PPE safety system</p></div>
+      <div><p class="n"><span data-count="0.9817" data-dec="4">0.9817</span></p><p>ROC-AUC after a SHAP audit exposed a "99.27% accurate" model built on a leaked feature</p></div>
+      <div><p class="n"><span data-count="68" data-dec="0">68</span> ms</p><p>latency for 89.3% accurate heart-signal classification on an ESP32-C3</p></div>
+      <div><p class="n"><span data-count="5" data-dec="0">5</span> terms</p><p>on the Dean's List, A.Y. 2023 to 2026</p></div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="section-head">
-        <h2 id="projects-title">Selected projects</h2>
-        <p>Four projects that show how I work: from a thesis on a Raspberry Pi to a tool a small business can use today.</p>
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="head">
+        <h2 id="projects-title">Projects</h2>
+        <p>Research, embedded and software work. Scroll and the panels stack.</p>
       </div>
 
-      <article class="case">
-        <div class="case-fig">
-          <p class="big">Offline</p>
-          <p class="big-sub">Runs on a Raspberry Pi 5, no cloud</p>
-        </div>
-        <div class="case-body">
-          <h3>ECHO <span class="tag-inline">Thesis, in progress</span></h3>
-          <p>Voice assistants struggle with dysarthric speech, and the people who need them most can't always rely on a network. ECHO recognizes a small set of intents from a handful of examples, entirely on-device.</p>
-          <ul class="stack"><li>Python</li><li>E-Branchformer</li><li>Prototypical Networks</li><li>Raspberry Pi 5</li></ul>
-          <p class="links"><a href="https://github.com/Crindo18/echo-bench">View on GitHub</a></p>
-        </div>
-      </article>
+      <div class="scenes">
+        <article class="scene s-ink" style="--i:0">
+          <header class="tab"><h3>ECHO</h3><p>Undergraduate thesis, in progress</p></header>
+          <div class="scene-body">
+            <p class="metric">Offline<span>No cloud. No network.</span></p>
+            <div class="copy">
+              <p>A portable, offline communication aid for people with atypical speech. It runs on a Raspberry Pi 5 with a ReSpeaker XVF3800 mic array and uses few-shot learning to adapt to each dysarthric speaker from a handful of examples.</p>
+              <ul class="tags"><li>E-Branchformer</li><li>Prototypical Networks</li><li>Raspberry Pi 5</li><li>Few-shot learning</li></ul>
+              <p class="links"><a href="https://github.com/Crindo18/echo-bench">GitHub</a></p>
+            </div>
+          </div>
+        </article>
 
-      <article class="case">
-        <div class="case-fig">
-          <p class="big">Cited</p>
-          <p class="big-sub">Every answer shows its source passage</p>
-        </div>
-        <div class="case-body">
-          <h3>Practicum Q&amp;A Chatbot</h3>
-          <p>A retrieval-augmented chatbot that answers questions about the DLSU practicum from official documents. It shows the exact passages behind each answer and says "I couldn't find that" instead of guessing. Includes an evaluation harness for retrieval and answer quality, tests that run offline, and CI.</p>
-          <ul class="stack"><li>Python</li><li>LlamaIndex</li><li>Chroma</li><li>Gemini</li><li>FastAPI</li></ul>
-          <p class="links"><a href="https://github.com/areslou/practicum-rag-chatbot">View on GitHub</a></p>
-        </div>
-      </article>
+        <article class="scene s-cobalt" style="--i:1">
+          <header class="tab"><h3>Occupational safety risk prediction</h3><p>Group project, PPE monitoring</p></header>
+          <div class="scene-body">
+            <p class="metric">98.68%<span>helmet accuracy, 93.64% for gloves</span></p>
+            <div class="copy">
+              <p>YOLOv8 detection plus four classifiers for PPE compliance. MobileNetV3-Small won both tasks at a fraction of ResNet50's size. A SHAP audit caught a risk model that looked 99.27% accurate only because of a leaked feature, and the rebuilt XGBoost model reached 0.9817 ROC-AUC.</p>
+              <p>The pipeline is grounded in Philippine labor data (RA 11058, PSA ISLE). It showed that gloves, the PPE tied to the most local injuries, were also the hardest to detect.</p>
+              <ul class="tags"><li>YOLOv8</li><li>MobileNetV3</li><li>ResNet50</li><li>EfficientNet</li><li>SHAP</li><li>XGBoost</li></ul>
+            </div>
+          </div>
+        </article>
 
-      <article class="case">
-        <div class="case-fig">
-          <p class="big"><span data-count="68">68</span> ms</p>
-          <p class="big-sub">89.3% accuracy on a microcontroller</p>
-        </div>
-        <div class="case-body">
-          <h3>BEAT-BIT</h3>
-          <p>A TinyML classifier that reads heart signals from a pulse sensor and classifies them on an ESP32-C3. The challenge was fitting a useful model into a few hundred kilobytes and keeping latency low enough to feel instant.</p>
-          <ul class="stack"><li>ESP32-C3</li><li>MAX30102</li><li>TinyML</li><li>Signal processing</li></ul>
-        </div>
-      </article>
+        <article class="scene s-paper" style="--i:2">
+          <header class="tab"><h3>BEAT-BIT</h3><p>Group project, wearable TinyML</p></header>
+          <div class="scene-body">
+            <p class="metric">68 ms<span>per classification, 89.3% validation accuracy</span></p>
+            <div class="copy">
+              <p>A modular heart monitoring wearable. A MAX30102 sensor feeds an ESP32-C3 running an on-device TinyML model trained in Edge Impulse to classify activity states. The challenge was fitting a useful model on a microcontroller while keeping latency low enough to feel instant.</p>
+              <ul class="tags"><li>ESP32-C3</li><li>MAX30102</li><li>Edge Impulse</li><li>TinyML</li></ul>
+            </div>
+          </div>
+        </article>
 
-      <article class="case">
-        <div class="case-fig case-img">
-          <img src="images/g-scan.webp" alt="Bayad Log app icon" width="500" height="500" loading="lazy">
-        </div>
-        <div class="case-body">
-          <h3>Bayad Log</h3>
-          <p>Small merchants who get paid by GCash screenshot end up with a camera roll full of receipts. Bayad Log reads each screenshot with OCR, records it in a ledger, and flags repeated reference numbers so the same payment can't be counted twice.</p>
-          <ul class="stack"><li>JavaScript</li><li>Tesseract.js</li><li>HTML / CSS</li></ul>
-          <p class="links"><a href="https://github.com/areslou/GCash-Scanner">View on GitHub</a> <a href="https://areslou.github.io/GCash-Scanner/">Open the app</a></p>
-        </div>
-      </article>
+        <article class="scene s-amber" style="--i:3">
+          <header class="tab"><h3>HimigTransform</h3><p>Group project, audio fingerprinting</p></header>
+          <div class="scene-body">
+            <p class="metric">Shazam<span>rebuilt for noise and for OPM</span></p>
+            <div class="copy">
+              <p>A noise-robust fingerprinting system for American and OPM songs. It extends Wang's landmark algorithm with SNR-adaptive peak picking and spectral-subtraction denoising, plus a short-query hashing mode for 3 to 5 second clips. It is evaluated on a 100-song database (50 American, 50 OPM) and is the first documented benchmark of Shazam-style fingerprinting on OPM.</p>
+              <ul class="tags"><li>MATLAB</li><li>DSP</li><li>App Designer</li></ul>
+            </div>
+          </div>
+        </article>
 
-      <h3 class="subhead">More work</h3>
-      <div class="table" role="table" aria-label="More projects">
-        <div class="row head" role="row"><span role="columnheader">Project</span><span role="columnheader">What it does</span><span role="columnheader">Built with</span></div>
-        <div class="row" role="row"><span role="cell"><a href="https://github.com/areslou/ppe-detector">PPE Compliance Detector</a></span><span role="cell">Detects missing helmets and safety gear from camera images</span><span role="cell">YOLOv8, MobileNetV3, ResNet50, EfficientNet</span></div>
-        <div class="row" role="row"><span role="cell">Model leakage audit</span><span role="cell">Found a feature leak behind a "99% accurate" model, then rebuilt it honestly</span><span role="cell">XGBoost, SHAP</span></div>
-        <div class="row" role="row"><span role="cell"><a href="https://github.com/sareavera2006/CrackDetection-YOLO">Crack and PCB defect detection</a></span><span role="cell">Computer vision for structural cracks and PCB wiring faults, written up in IEEE format</span><span role="cell">YOLOv8, OpenCV</span></div>
-        <div class="row" role="row"><span role="cell"><a href="https://github.com/areslou/The-Scholar-Hive">The Scholar Hive</a></span><span role="cell">Scholar directory and admin dashboard for the Lasallian Scholars Society, with email blasts</span><span role="cell">PHP, MySQL</span></div>
-        <div class="row" role="row"><span role="cell"><a href="https://github.com/accessdlsu/dlsucso-leap2026">LEAP 2026 website</a></span><span role="cell">Event site for a university-wide event, built with a multi-developer team</span><span role="cell">React, TypeScript</span></div>
-        <div class="row" role="row"><span role="cell">Audio fingerprinting</span><span role="cell">Song identification that adapts to noise, extending Wang's landmark algorithm</span><span role="cell">Python, DSP</span></div>
-        <div class="row" role="row"><span role="cell">Plantita-Fi</span><span role="cell">Sensor monitoring and control for an urban hydroponics setup</span><span role="cell">NodeMCU, Blynk</span></div>
-        <div class="row" role="row"><span role="cell">BedChem</span><span role="cell">Clinical supply routing using fractional knapsack and Dijkstra's algorithm</span><span role="cell">Algorithms</span></div>
-        <div class="row" role="row"><span role="cell">3-band equalizer</span><span role="cell">Audio equalizer app built on IIR filters</span><span role="cell">DSP</span></div>
-        <div class="row" role="row"><span role="cell">ELM Prestige website</span><span role="cell">Company website design and development for a beauty network</span><span role="cell">HTML, CSS</span></div>
+        <article class="scene s-mist" style="--i:4">
+          <header class="tab"><h3>Bayad Log</h3><p>Solo project, web app</p></header>
+          <div class="scene-body">
+            <p class="metric">1 receipt<span>counted once, every time</span></p>
+            <div class="copy">
+              <p>Small merchants paid by GCash screenshot end up with a camera roll of receipts. Bayad Log reads each screenshot with OCR, records it in a ledger, and flags repeated reference numbers so the same payment can't be counted twice.</p>
+              <ul class="tags"><li>JavaScript</li><li>Tesseract.js</li><li>HTML and CSS</li></ul>
+              <p class="links"><a href="https://github.com/areslou/GCash-Scanner">GitHub</a><a href="https://areslou.github.io/GCash-Scanner/">Open the app</a></p>
+            </div>
+          </div>
+        </article>
       </div>
+
+      <div class="also">
+        <h3>Also built</h3>
+        <ul>
+          <li><span>Practicum Q&amp;A chatbot</span><span>Retrieval chatbot that answers DLSU practicum questions with cited sources and refuses to guess. Includes an evaluation harness and CI.</span><span>Python, LlamaIndex, Chroma, Gemini, FastAPI</span><a href="https://github.com/areslou/practicum-rag-chatbot">GitHub</a></li>
+          <li><span>PCB wiring defect detection</span><span>Hybrid classical and YOLOv8s pipeline. ORB matching and RANSAC align a board to a golden reference, and a pixel diff flags shorts and opens. IEEE-format paper.</span><span>Python, OpenCV, YOLOv8s</span></li>
+          <li><span>Crack detection</span><span>YOLOv8 with MobileNetV3, ResNet50 and EfficientNet classifiers for concrete cracks and dimension measurement.</span><span>YOLOv8, RTX 4050</span><a href="https://github.com/sareavera2006/CrackDetection-YOLO">GitHub</a></li>
+          <li><span>FINSTAD Case 1</span><span>Eight datasets merged onto one trading calendar in R, ten SQL-style investigations, and a $1,000,000 allocation backtested and stress-tested.</span><span>R, dplyr, FRED, Yahoo Finance</span></li>
+          <li><span>The Scholar Hive</span><span>Scholar profile admin and directory for the Lasallian Scholars Society with search, filtering, PDF uploads and email blasts. I built the admin dashboard, scholars module and email system.</span><span>PHP, MySQL</span><a href="https://github.com/areslou/The-Scholar-Hive">GitHub</a></li>
+          <li><span>DLSU CSO LEAP 2026 website</span><span>Front-end for a university-wide event site with React components and Framer Motion animation.</span><span>React, TypeScript</span><a href="https://github.com/accessdlsu/dlsucso-leap2026">GitHub</a></li>
+          <li><span>3-band audio equalizer</span><span>Live IIR Butterworth equalizer with real-time playback, microphone input and gain from -12 to +12 dB per band.</span><span>MATLAB, Audio Toolbox</span></li>
+          <li><span>Plantita-Fi</span><span>Environmental monitoring and control for urban hydroponics.</span><span>NodeMCU, Blynk</span></li>
+          <li><span>BedChem</span><span>Fractional knapsack and Dijkstra's algorithm to balance clinical evaluation against resource distribution.</span><span>Discrete math</span></li>
+          <li><span>ELM Prestige website</span><span>Official site for The Signature Beauty Network.</span><span>HTML, CSS</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EVENTS REEL -->
+    <section class="reel" id="events" aria-labelledby="events-title">
+      <div class="reel-stick">
+        <div class="reel-head">
+          <h2 id="events-title">Events I led</h2>
+          <p>Vice President for Activities and Project Head, Lasallian Scholars Society. Scroll sideways.</p>
+          <div class="reel-bar" aria-hidden="true"><span></span></div>
+        </div>
+        <ul class="reel-track">
+          <li><button type="button" class="shot" data-full="images/ev-transcend.webp" data-alt="Transcend: ETHEREAL"><img src="images/ev-transcend.webp" alt="A speaker at Transcend: ETHEREAL" width="1500" height="844" loading="lazy"></button><div class="cap"><h3>Transcend: ETHEREAL</h3><p>July 2026. The Scholars' 3rd General Assembly, with interactive activities and multimedia segments.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-palssiklaban.webp" data-alt="LEAP 2026: PaLSSiklaban"><img src="images/ev-palssiklaban.webp" alt="Scholars posing by the LSS letters at PaLSSiklaban" width="1500" height="1000" loading="lazy"></button><div class="cap"><h3>LEAP 2026: PaLSSiklaban</h3><p>June 2026. Intra-LSS committee battle built on classic Filipino games. I built the scoring spreadsheet.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-lssummit-1.webp" data-alt="LSSUMMIT"><img src="images/ev-lssummit-1.webp" alt="Participants gathered at LSSUMMIT" width="1500" height="998" loading="lazy"></button><div class="cap"><h3>LSSUMMIT</h3><p>Lead Associate for Events, 2024 to 2025. Core Leader for Events, 2026: Day 2 master script, 9-round poster judging rotation across 19 tables.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-lemniscate-1.webp" data-alt="Lemniscate: EXTRAVAGANZA"><img src="images/ev-lemniscate-1.webp" alt="Scholars at Lemniscate: EXTRAVAGANZA" width="1500" height="1000" loading="lazy"></button><div class="cap"><h3>Lemniscate: EXTRAVAGANZA</h3><p>April 2026. The 2nd General Assembly that closed Scholars' Week, built on the symbol of continuity.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-ripplss-1.webp" data-alt="RippLSS 2.0"><img src="images/ev-ripplss-1.webp" alt="A scholar speaking at RippLSS 2.0" width="1500" height="998" loading="lazy"></button><div class="cap"><h3>RippLSS 2.0</h3><p>March 2026. A three-hour forum on corruption and development that produced policy notes and reflection briefs.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-alpha.webp" data-alt="Alpha: ENCORE"><img src="images/ev-alpha.webp" alt="Scholars at Alpha: ENCORE" width="1500" height="1125" loading="lazy"></button><div class="cap"><h3>Alpha: ENCORE</h3><p>November 2025. The General Assembly that set the society's direction for the term.</p></div></li>
+          <li class="tall"><button type="button" class="shot" data-full="images/ev-acqui.webp" data-alt="2025 Scholars' Acquaintance Party poster"><img src="images/ev-acqui.webp" alt="Poster for the 2025 Scholars' Acquaintance Party" width="1080" height="1350" loading="lazy"></button><div class="cap"><h3>Scholars' Acquaintance Party</h3><p>2025. Lasallian Scholars Society.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-scholars-night.webp" data-alt="Scholars' Night"><img src="images/ev-scholars-night.webp" alt="Scholars on stage at Scholars' Night" width="1500" height="1000" loading="lazy"></button><div class="cap"><h3>Scholars' Night</h3><p>Lasallian Scholars Society.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-acts-onboarding.webp" data-alt="Activities Term 2 onboarding"><img src="images/ev-acts-onboarding.webp" alt="The activities team at Term 2 onboarding" width="1500" height="1125" loading="lazy"></button><div class="cap"><h3>Activities onboarding</h3><p>Term 2 onboarding for the activities team.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-awards.webp" data-alt="Awards"><img src="images/ev-awards.webp" alt="Scholars holding up certificates" width="1500" height="1125" loading="lazy"></button><div class="cap"><h3>Certificates of recognition</h3><p>Lasallian Scholars Society.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-dlsu-gmg.webp" data-alt="DLSU Green Media Group"><img src="images/ev-dlsu-gmg.webp" alt="Green Media Group members receiving a certificate of recognition" width="1500" height="1000" loading="lazy"></button><div class="cap"><h3>Green Media Group</h3><p>Certificate of recognition. I handle social media for the group.</p></div></li>
+          <li><button type="button" class="shot" data-full="images/ev-gmg-omnibus.webp" data-alt="GMG Omnibus"><img src="images/ev-gmg-omnibus.webp" alt="Green Media Group members at the Omnibus" width="1500" height="1125" loading="lazy"></button><div class="cap"><h3>GMG Omnibus</h3><p>DLSU Green Media Group.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT SHEET -->
+    <section class="sheet" aria-label="More photos from the events">
+      <ul>
+        <li class="w2"><button type="button" class="shot" data-full="images/ev-ripplss.webp" data-alt="Scholars at an LSS event"><img src="images/ev-ripplss.webp" alt="Scholars with certificates under colorful banners" width="1500" height="1000" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-lssummit-2025.webp" data-alt="LSSUMMIT 2025"><img src="images/ev-lssummit-2025.webp" alt="A speaker at LSSUMMIT 2025" width="1500" height="844" loading="lazy"></button></li>
+        <li class="h2"><button type="button" class="shot" data-full="images/ev-eb-2.webp" data-alt="12th Lasallian Scholars Society Executive Board"><img src="images/ev-eb-2.webp" alt="Poster of the 12th Lasallian Scholars Society Executive Board" width="1200" height="1500" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-alpha-1.webp" data-alt="Alpha: ENCORE crowd"><img src="images/ev-alpha-1.webp" alt="The crowd at Alpha: ENCORE" width="1500" height="998" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-lssummit-2025-2.webp" data-alt="LSSUMMIT 2025 crowd"><img src="images/ev-lssummit-2025-2.webp" alt="The crowd at LSSUMMIT 2025" width="1500" height="844" loading="lazy"></button></li>
+        <li class="w2"><button type="button" class="shot" data-full="images/ev-eb.webp" data-alt="Executive board"><img src="images/ev-eb.webp" alt="The executive board posing together" width="1500" height="1125" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-lssummit.webp" data-alt="LSSUMMIT"><img src="images/ev-lssummit.webp" alt="Team with certificates at LSSUMMIT" width="1500" height="844" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-lemniscate.webp" data-alt="Lemniscate speech"><img src="images/ev-lemniscate.webp" alt="A speaker at the Lemniscate podium" width="1000" height="1500" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-eb-1.webp" data-alt="Scholars' Acquaintance Party"><img src="images/ev-eb-1.webp" alt="Group at the Scholars' Acquaintance Party" width="1500" height="844" loading="lazy"></button></li>
+        <li><button type="button" class="shot" data-full="images/ev-lssummit-3.webp" data-alt="LSSUMMIT team"><img src="images/ev-lssummit-3.webp" alt="The LSSUMMIT team outdoors" width="1500" height="1125" loading="lazy"></button></li>
+        <li class="w2"><button type="button" class="shot" data-full="images/ev-pictorial-lss.webp" data-alt="LSS pictorial"><img src="images/ev-pictorial-lss.webp" alt="LSS group pictorial" width="1500" height="1000" loading="lazy"></button></li>
+      </ul>
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="section" id="experience" aria-labelledby="exp-title">
-      <div class="section-head">
-        <h2 id="exp-title">Experience and leadership</h2>
-        <p>Most of my engineering practice happens alongside running events and teams. That mix is what taught me to ship on a deadline.</p>
+    <section class="exp" id="experience" aria-labelledby="exp-title">
+      <div class="exp-side">
+        <h2 id="exp-title">Experience</h2>
+        <p>Eight organizations in three years. Most of it is planning, logistics and communications: the skills that make a technical team run on time.</p>
       </div>
-      <ol class="timeline">
-        <li><time>Sept 2025 to present</time><div><h3>Vice President for Activities</h3><p class="org">DLSU Lasallian Scholars Society</p><p>Plans activities for scholars' academic and personal growth and coordinates attendance across teams.</p></div></li>
-        <li><time>Sept 2025 to present</time><div><h3>Social media rookie</h3><p class="org">DLSU Green Media Group</p><p>Creates and schedules content in line with the organization's branding.</p></div></li>
-        <li><time>Jan to Sept 2025</time><div><h3>Executive Officer for Sports</h3><p class="org">DLSU Engineering College Government</p><p>Planned and ran sports programs for engineering students.</p></div></li>
-        <li><time>Oct 2024 to Sept 2025</time><div><h3>Lead Associate for Events</h3><p class="org">LSSUMMIT, Lasallian Scholars Summit</p><p>Coordinated program flow, hosting and on-ground execution.</p></div></li>
-        <li><time>Oct 2024 to Sept 2025</time><div><h3>Marketing Executive</h3><p class="org">DLSU Data Science Society</p><p>Planned marketing content and wrote captions for social campaigns.</p></div></li>
-        <li><time>Sept 2024 to June 2025</time><div><h3>Vice President for Activities</h3><p class="org">DLSU SYNTAX</p><p>Oversaw flagship engineering events, including the SYNTAX Math Challenge.</p></div></li>
-        <li><time>Sept 2023 to Aug 2024</time><div><h3>Activities Officer</h3><p class="org">DLSU SYNTAX</p><p>Handled logistics, venues and registration for academic and technical events.</p></div></li>
-        <li><time>Sept 2021 to June 2023</time><div><h3>NCR Regional Council Member</h3><p class="org">Philippine Society of Youth Science Clubs</p><p>Connected Metro Manila schools through student delegates and the national chapter.</p></div></li>
-        <li><time>Sept 2021 to June 2023</time><div><h3>Business Manager</h3><p class="org">VCSMS Robotics Guild</p><p>Planned technical workshops and robotics competitions.</p></div></li>
+      <ol class="exp-list">
+        <li><time>Sept 2025 to Sept 2026</time><div><h3>Vice President for Activities</h3><p class="org">DLSU Lasallian Scholars Society</p><p>Planned and ran the society's events, kept communication channels active and coordinated scholar attendance.</p></div></li>
+        <li><time>Sept 2025 to present</time><div><h3>Rookie, social media management</h3><p class="org">DLSU Green Media Group</p><p>Schedules content, handles community engagement and reviews post performance.</p></div></li>
+        <li><time>Dec 2025 to Apr 2026</time><div><h3>Team Leader, Media Relations (Logistics)</h3><p class="org">DLSU USG Office of the Vice President for Internal Affairs</p><p>Managed press partnerships for Animo Pride 2026 with The LaSallian, Arch Network and the Manila Times.</p></div></li>
+        <li><time>Oct 2024 to Sept 2025</time><div><h3>Lead Associate for Events</h3><p class="org">LSSUMMIT</p><p>Led program flow, hosting and on-ground execution. Returned in 2026 as Core Leader for Events.</p></div></li>
+        <li><time>Sept 2024 to June 2025</time><div><h3>Vice President for Activities</h3><p class="org">DLSU SYNTAX</p><p>Ran the SYNTAX Math Challenge, VoyageX 123, ONE-2-4 ALL and BoardENG. Activities Officer the year before.</p></div></li>
+        <li><time>Jan to Sept 2025</time><div><h3>Executive Officer for Sports</h3><p class="org">DLSU Engineering College Government</p><p>Ran sports programs, facility bookings and the link to university sports administration.</p></div></li>
+        <li><time>Oct 2024 to Sept 2025</time><div><h3>Marketing Executive</h3><p class="org">DLSU Data Science Society</p><p>Planned campaign content and wrote captions with consistent brand messaging.</p></div></li>
+        <li><time>Oct 2024 to Sept 2025</time><div><h3>Junior Officer for Scholar Services</h3><p class="org">DLSU Lasallian Scholars Society</p><p>Supported scholar events and academic sessions, and managed feedback.</p></div></li>
+        <li><time>Jan to Sept 2025</time><div><h3>Associate for Community Engagement</h3><p class="org">DLSU USG Office of the Vice President for Internal Affairs</p><p>Supported outreach and service projects across the university.</p></div></li>
+        <li><time>Jan to Dec 2024</time><div><h3>Executive Officer for Publicity and Promotions</h3><p class="org">DLSU 78th ENG Batch Government</p><p>Built promotional strategy and materials for batch events.</p></div></li>
       </ol>
     </section>
 
-    <!-- SKILLS + EDUCATION -->
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="section-head">
-        <h2 id="skills-title">Skills and education</h2>
-        <p>Grouped by what I use them for, not scored out of 100.</p>
+    <!-- RECORD -->
+    <section class="record" id="record" aria-labelledby="record-title">
+      <h2 id="record-title" class="sr">Education, awards, certifications and tools</h2>
+      <div class="cell c-edu">
+        <h3>Education</h3>
+        <p class="big">BS Computer Engineering</p>
+        <p>De La Salle University, Manila, 2023 to present. Minor in Financial Risk and Analytics. Dean's Lister for 5 terms. DOST-SEI Merit Scholar and St. La Salle Financial Scholar.</p>
+        <p class="small">Valenzuela City School of Mathematics and Science, STEM strand, 2017 to 2023. Salutatorian in Grade 10, with high honors in Grade 11.</p>
       </div>
-      <div class="skills">
-        <div><h3>Languages</h3><p>Python, JavaScript, TypeScript, PHP, SQL, R</p></div>
-        <div><h3>Machine learning</h3><p>PyTorch, YOLOv8, scikit-learn, XGBoost, SHAP, OpenCV, pandas, NumPy</p></div>
-        <div><h3>Web</h3><p>React, HTML and CSS, FastAPI, MySQL</p></div>
-        <div><h3>Hardware</h3><p>Raspberry Pi 5, ESP32, NodeMCU, signal processing</p></div>
-        <div><h3>Tools</h3><p>Git, Linux, GitHub Actions</p></div>
-        <div><h3>Creative</h3><p>Video editing, graphic design, social media, event production</p></div>
+      <div class="cell c-awards">
+        <h3>Awards</h3>
+        <ul>
+          <li><b>Champion</b>Chemical Engineering Society Absolute Zero Quiz Bee, 2024</li>
+          <li><b>1st place</b>Digital Photography Contest, 2022</li>
+          <li><b>Gawad Pagkilala</b>Outstanding contribution in leadership, senior high school</li>
+        </ul>
       </div>
-
-      <div class="edu">
-        <div><time>2022 to present</time><h3>BS Computer Engineering</h3><p>De La Salle University, Manila. Thesis on offline speech AI for atypical speakers.</p></div>
-        <div><time>2016 to 2022</time><h3>Junior and senior high school</h3><p>Vibal-Canossa School of Manila System, STEM track, with robotics and science advocacy.</p></div>
+      <div class="cell c-cert">
+        <h3>Certifications</h3>
+        <ul>
+          <li><b>Python Essentials 1</b>Cisco Networking Academy, Sept 2026</li>
+          <li><b>Research ethics, Modules 1 to 3</b>TRREE: introduction, ethics evaluation, informed consent</li>
+          <li><b>MATLAB Onramp and Programming Constructs</b>MathWorks, May 2026</li>
+          <li><b>Basic Social Media Management</b>Skill Bridge, 2023</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- MEDIA -->
-    <section class="section" id="media" aria-labelledby="media-title">
-      <div class="section-head">
-        <h2 id="media-title">Events and media</h2>
-        <p>Posters, video and campaigns I produced for the organizations above.</p>
+      <div class="cell c-tools">
+        <h3>Tools</h3>
+        <dl>
+          <div><dt>Languages</dt><dd>Python, R, PHP, SQL, TypeScript, MATLAB</dd></div>
+          <div><dt>AI and data</dt><dd>PyTorch, YOLOv8, OpenCV, SHAP, XGBoost, R Markdown</dd></div>
+          <div><dt>Hardware</dt><dd>Raspberry Pi 5, ESP32, NodeMCU, Blynk, Edge Impulse</dd></div>
+          <div><dt>Engineering</dt><dd>Multisim, Logisim, AutoCAD, MATLAB toolboxes</dd></div>
+          <div><dt>Creative</dt><dd>DaVinci Resolve, CapCut, Canva, Adobe Flash</dd></div>
+        </dl>
       </div>
-      <ul class="gallery">
-        <li><button type="button" class="shot" data-full="images/lss-summit.webp" data-alt="Lasallian Scholars Summit event photo"><img src="images/lss-summit.webp" alt="Lasallian Scholars Summit event photo" width="1100" height="733" loading="lazy"></button><p><strong>LSS Summit</strong> Event coordination</p></li>
-        <li><button type="button" class="shot" data-full="images/alpha-encore.webp" data-alt="Alpha Encore general assembly"><img src="images/alpha-encore.webp" alt="Alpha Encore general assembly" width="1100" height="733" loading="lazy"></button><p><strong>Alpha: ENCORE</strong> General assembly and Scholars Week</p></li>
-        <li><button type="button" class="shot" data-full="images/syntax-math.webp" data-alt="SYNTAX Math Challenge"><img src="images/syntax-math.webp" alt="SYNTAX Math Challenge" width="1100" height="733" loading="lazy"></button><p><strong>SYNTAX Math Challenge</strong> Flagship engineering event</p></li>
-        <li><button type="button" class="shot" data-full="images/horizons.webp" data-alt="Horizons seminar poster"><img src="images/horizons.webp" alt="Horizons seminar poster" width="1000" height="1250" loading="lazy"></button><p><strong>Horizons</strong> VoyageX and HORIZON seminars</p></li>
-        <li><button type="button" class="shot" data-full="images/green-media.webp" data-alt="Green Media Christmas special"><img src="images/green-media.webp" alt="Green Media Christmas special" width="1100" height="643" loading="lazy"></button><p><strong>Green Media Xmas</strong> Social campaign and filming</p></li>
-        <li><button type="button" class="shot" data-full="images/muni-muni.webp" data-alt="Muni-Muni short film"><img src="images/muni-muni.webp" alt="Muni-Muni short film" width="878" height="545" loading="lazy"></button><p><strong>Muni-Muni</strong> Short film editing</p></li>
-        <li><button type="button" class="shot" data-full="images/fast-festive.webp" data-alt="Fast and Festive interview special"><img src="images/fast-festive.webp" alt="Fast and Festive interview special" width="591" height="746" loading="lazy"></button><p><strong>Fast &amp; Festive</strong> Interview special</p></li>
-        <li><button type="button" class="shot" data-full="images/anonas.webp" data-alt="ANONAS merchandise publicity material"><img src="images/anonas.webp" alt="ANONAS merchandise publicity material" width="1000" height="1000" loading="lazy"></button><p><strong>ANONAS</strong> Merchandise publicity</p></li>
-      </ul>
+      <div class="cell c-research">
+        <h3>Research since 2017</h3>
+        <p>Ten school research projects, from a dalandan-peel hand sanitizer to an exhaust filter made from recycled cans, and a case study on dyscalculia therapy using sungka and dominoes. Led four of them.</p>
+        <p class="small">Work immersion, IT support, Our Lady of Fatima University, 80 hours, 2023.</p>
+      </div>
+      <div class="cell c-creative">
+        <h3>Creative work</h3>
+        <ul class="mini">
+          <li><img src="images/anonas.webp" alt="ANONAS merchandise publicity poster" width="1000" height="1000" loading="lazy"><span>ANONAS merchandise campaign</span></li>
+          <li><img src="images/muni-muni.webp" alt="Still from the Muni-Muni short film" width="878" height="545" loading="lazy"><span>Muni-Muni short film edit</span></li>
+          <li><img src="images/fast-festive.webp" alt="Fast and Festive interview special" width="591" height="746" loading="lazy"><span>Fast &amp; Festive interview special</span></li>
+        </ul>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <img class="portrait" src="images/portrait.webp" alt="Portrait of Brendan Lou Millares" width="900" height="1353" loading="lazy">
-      <div>
-        <h2 id="contact-title">Let's talk about your internship team</h2>
-        <p>I'm looking for a technical, 480-hour practicum starting January 2027. If you build embedded, machine learning or software products and want someone who ships, I'd like to hear about it.</p>
-        <ul class="contact-list">
-          <li><a href="mailto:brendanlou8@gmail.com">brendanlou8@gmail.com</a></li>
-          <li><a href="mailto:brendan_millares@dlsu.edu.ph">brendan_millares@dlsu.edu.ph</a></li>
-          <li><a href="https://www.linkedin.com/in/brendan-lou-millares-23a361289/">linkedin.com/in/brendan-lou-millares</a></li>
-          <li><a href="https://github.com/areslou">github.com/areslou</a></li>
-        </ul>
-        <a class="btn" href="assets/brendan_cv.pdf">Download CV</a>
+      <div class="contact-copy">
+        <h2 id="contact-title">Looking for a technical internship from January 2027</h2>
+        <div class="contact-grid">
+          <div>
+            <p>If your team builds embedded, speech or machine learning products and wants someone who plans carefully and ships, send me a message.</p>
+            <a class="btn btn-amber" href="assets/brendan_cv.pdf">Download CV (PDF)</a>
+          </div>
+          <ul class="contact-list">
+            <li><a href="mailto:brendanlou8@gmail.com">brendanlou8@gmail.com</a></li>
+            <li><a href="mailto:brendan_millares@dlsu.edu.ph">brendan_millares@dlsu.edu.ph</a></li>
+            <li><a href="https://www.linkedin.com/in/brendan-lou-millares-23a361289/">linkedin.com/in/brendan-lou-millares</a></li>
+            <li><a href="https://github.com/areslou">github.com/areslou</a></li>
+          </ul>
+        </div>
       </div>
+      <img class="contact-photo" src="images/fx-heat.webp" alt="Portrait of Brendan Lou Millares rendered as a heat map" width="900" height="1353" loading="lazy">
     </section>
   </main>
 
