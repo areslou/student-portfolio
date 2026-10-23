@@ -17,7 +17,7 @@
     hs = window.innerWidth >= 960 && !reduce;
     reel.classList.toggle("hscroll", hs);
     if (hs) {
-      var th = reelTrack.clientHeight - 116 - 4;
+      var th = reelTrack.clientHeight - 132 - 4;
       $$("li", reelTrack).forEach(function (li) {
         var im = $("img", li);
         li.style.width = Math.round(th * (+im.getAttribute("width") / +im.getAttribute("height"))) + 4 + "px";

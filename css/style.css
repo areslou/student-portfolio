@@ -145,7 +145,7 @@ h1 .ch { display: inline-block; font-variation-settings: "wght" 560; }
 .reel.hscroll .reel-track > li { height: 100%; }
 .reel.hscroll .reel-track .shot { flex: 1; min-height: 0; aspect-ratio: auto; }
 .reel.hscroll .reel-track .shot img { width: auto; height: 100%; max-width: none; }
-.reel.hscroll .cap { height: 116px; overflow: hidden; flex: none; }
+.reel.hscroll .cap { height: 132px; overflow: hidden; flex: none; }
 
 /* ---------- shots: duotone until hover ---------- */
 .shot { display: block; width: 100%; padding: 0; border: 0; background: var(--cobalt); cursor: zoom-in; overflow: hidden; position: relative; }
@@ -296,3 +296,12 @@ dialog#videobox::backdrop { background: rgba(10,20,36,.92); }
 dialog#videobox p { text-align: center; margin: 12px 0 0; font-weight: 600; }
 dialog#videobox a { color: var(--amber); }
 dialog#videobox .close { position: absolute; right: 0; top: -46px; font-weight: 700; background: var(--amber); color: var(--ink); border: 0; padding: 9px 18px; cursor: pointer; }
+
+/* scholar credentials strip */
+.creds{background:var(--cobalt);color:var(--white);border-top:2px solid var(--ink)}
+.creds ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.creds li{padding:22px clamp(16px,2.4vw,32px);border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:8px}
+.creds li:last-child{border-right:0}
+.creds b{font:800 clamp(1.5rem,2.6vw,2.5rem)/.95 "Bricolage Grotesque","Figtree",sans-serif;text-transform:uppercase;letter-spacing:-.02em;color:var(--amber)}
+.creds span{font-size:.95rem;line-height:1.35}
+@media (max-width:960px){.creds ul{grid-template-columns:repeat(2,minmax(0,1fr))}.creds li{border-bottom:2px solid var(--ink)}.creds li:nth-child(2n){border-right:0}}
