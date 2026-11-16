@@ -305,3 +305,39 @@ dialog#videobox .close { position: absolute; right: 0; top: -46px; font-weight: 
 .creds b{font:800 clamp(1.5rem,2.6vw,2.5rem)/.95 "Bricolage Grotesque","Figtree",sans-serif;text-transform:uppercase;letter-spacing:-.02em;color:var(--amber)}
 .creds span{font-size:.95rem;line-height:1.35}
 @media (max-width:960px){.creds ul{grid-template-columns:repeat(2,minmax(0,1fr))}.creds li{border-bottom:2px solid var(--ink)}.creds li:nth-child(2n){border-right:0}}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:minmax(260px,34%) 1fr;background:var(--mist);border-top:3px solid var(--ink);position:relative;z-index:2}
+.about-side{padding:clamp(24px,3vw,44px) var(--gut);border-right:3px solid var(--ink)}
+.about-side h2{font-size:clamp(2.4rem,5vw,4.6rem);font-weight:800;letter-spacing:-.045em}
+.goal{margin:22px 0 22px;padding:16px 18px;background:var(--ink);color:var(--white);font-weight:500;max-width:34ch}
+.goal b{display:block;color:var(--amber);font:800 .85rem "Figtree",sans-serif;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.about-links,.resume-links{display:flex;flex-wrap:wrap;gap:10px}
+.about .btn:not(.btn-amber),.resume .btn:not(.btn-amber){color:var(--ink)}
+.about-main{padding:clamp(24px,3vw,44px) var(--gut)}
+.about-main p{max-width:62ch}
+.intro{font:600 clamp(1.15rem,1.8vw,1.45rem)/1.4 "Figtree",sans-serif}
+.journey{margin-top:26px;border-top:3px solid var(--ink)}
+.journey li{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:14px 0;border-bottom:2px solid var(--ink)}
+.journey time{font:800 1.5rem/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;color:var(--cobalt)}
+.journey p{margin:0;font-size:.97rem}
+.journey b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.journey .next time{color:var(--ink);background:var(--amber);padding:4px 6px;align-self:start;justify-self:start}
+
+/* ---------- resume ---------- */
+.resume{display:grid;grid-template-columns:minmax(260px,34%) 1fr;background:var(--white);border-top:3px solid var(--ink);position:relative;z-index:2}
+.resume-side{padding:clamp(24px,3vw,44px) var(--gut)}
+.resume-side h2{font-size:clamp(2.4rem,5vw,4.6rem);font-weight:800;letter-spacing:-.045em;margin-bottom:18px}
+.resume-side p{font-weight:500;max-width:32ch}
+.resume-view{border-left:3px solid var(--ink);background:var(--mist);padding:clamp(12px,2vw,24px)}
+.resume-view{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.5vw,20px);align-content:start}
+.page{display:block;border:3px solid var(--ink);background:var(--white);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.page:hover{transform:translate(-4px,-4px);box-shadow:4px 4px 0 var(--amber)}
+.page span{display:block;padding:6px 10px;border-top:3px solid var(--ink);font-weight:700;font-size:.9rem}
+
+@media (max-width:960px){
+  .about,.resume{grid-template-columns:1fr}
+  .about-side{border-right:0;border-bottom:3px solid var(--ink)}
+  .resume-view{border-left:0;border-top:3px solid var(--ink)}
+}
+@media (max-width:600px){.resume-view{grid-template-columns:1fr 1fr}.resume-view .page:nth-child(3){display:none}.journey li{grid-template-columns:64px 1fr}.journey time{font-size:1.2rem}}
